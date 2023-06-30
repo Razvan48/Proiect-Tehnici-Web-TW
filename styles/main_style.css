@@ -1,0 +1,463 @@
+:root
+{
+	--gri_inchis: #262626;
+}
+
+*
+{
+	background-color: black;
+}
+
+a
+{
+	text-decoration: none;
+	color: lightblue;
+}
+
+a:active
+{
+	color: purple;
+}
+
+body
+{
+	color: white;
+}
+
+.div_animatie_1
+{
+	position: relative;
+	background-color: white;
+	text-align: center;
+	animation-name: rotatie_1;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	width: 100px;
+	height: 100px;
+}
+
+.div_animatie_2
+{
+	position: relative;
+	background-color: white;
+	text-align: center;
+	left: 900px;
+	animation-name: rotatie_2;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	width: 100px;
+	height: 100px;
+}
+
+.fig_img_row
+{
+	display : inline-block;
+}
+
+.img_dim
+{
+	width: 100%;
+	height: auto;
+	border: 3px solid white;
+	padding: 3px;
+	margin: 3px;
+}
+
+table, th
+{
+	width: 75%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+	border-collapse: collapse;
+}
+
+table td + td
+{
+	border-left: 3px solid white;
+}
+
+#div_meniu_principal
+{
+	background-color: var(--gri_inchis);
+	border: 5px solid gray;
+	padding: 3px;
+	margin: 3px;
+}
+
+#meniu_principal
+{
+	position: sticky;
+	top: 5%;
+	width: 100%;
+}
+
+#buton_meniu_principal 
+{
+	background-color: white;
+	color: black;
+	padding: 10px;
+	font-size: 20px;
+	border: 5px solid gray;
+	cursor: pointer;
+	width: 100%;
+}
+
+#optiuni_meniu_principal
+{
+	display: none;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	border: 3px solid gray;
+	padding: 3px;
+	margin: 3px;
+}
+
+#buton_meniu_principal:hover
+{
+	background-color: gray;
+}
+
+#meniu_principal:hover #optiuni_meniu_principal
+{
+	display: block;
+}
+
+#optiuni_meniu_principal a
+{
+	color: white;
+	padding: 1%;
+	text-decoration: none;
+	display: block;
+	font-size: 20px;
+	
+	animation-name: desfasurare_meniu;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+}
+
+#optiuni_meniu_principal a:nth-child(1)
+{
+	animation-name: desfasurare_meniu;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+}
+
+#optiuni_meniu_principal a:nth-child(2)
+{
+	animation-name: desfasurare_meniu;
+	animation-duration: 1.0s;
+	animation-timing-function: ease-in-out;
+}
+
+#optiuni_meniu_principal a:nth-child(3)
+{
+	animation-name: desfasurare_meniu;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in-out;
+}
+
+#optiuni_meniu_principal a:nth-child(4)
+{
+	animation-name: desfasurare_meniu;
+	animation-duration: 2.0s;
+	animation-timing-function: ease-in-out;
+}
+
+#optiuni_meniu_principal a:nth-child(5)
+{
+	animation-name: desfasurare_meniu;
+	animation-duration: 2.5s;
+	animation-timing-function: ease-in-out;
+}
+
+#optiuni_meniu_principal a:nth-child(6)
+{
+	animation-name: desfasurare_meniu;
+	animation-duration: 3.0s;
+	animation-timing-function: ease-in-out;
+}
+
+#optiuni_meniu_principal a:nth-child(7)
+{
+	animation-name: desfasurare_meniu;
+	animation-duration: 3.5s;
+	animation-timing-function: ease-in-out;
+}
+
+#optiuni_meniu_principal a:hover
+{
+	background-color: gray;
+}
+
+@keyframes desfasurare_meniu
+{
+	from
+	{
+		transform: translateX(-100%);
+	}
+	to
+	{
+		transform: translateX(0);
+	}
+}
+
+section *
+{
+	background-color: var(--gri_inchis);
+}
+
+section
+{
+	border: 5px solid gray;
+}
+
+h1
+{
+	text-align: center;
+	text-decoration: underline;
+}
+
+h2
+{
+	text-align: center;
+}
+
+#div_formular
+{
+	background-color: white;
+	color: black;
+	border: 5px solid gray;
+	cursor: pointer;
+	width: 50%;
+	text-align: center;
+	height: 50px;
+}
+
+#div_formular a
+{
+	background-color: white;
+	color: inherit;
+	text-decoration: none;
+}
+
+#div_formular:hover
+{
+	background-color: gray;
+}
+
+#div_formular:hover a
+{
+	background-color: gray;
+}
+
+#div_grid
+{
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	grid-gap: 5%;
+}
+
+p::before
+{
+	content: "\00a0\00a0\00a0\00a0\00a0";
+}
+
+#div_principal
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#a_intoarcere::before
+{
+	content: "--";
+}
+
+#a_intoarcere::after
+{
+	content: "--";
+}
+
+footer
+{
+	width: 100%;
+	padding: 0;
+    margin: 0;
+    background-color: gray;
+    color: white;
+    text-align: right;
+}
+
+footer > p
+{
+	font-size: 10px;
+}
+
+.div_animatie_1:hover
+{
+	border-radius: 50%;
+	animation: none;
+}
+
+.div_animatie_2:hover
+{
+	transform: rotate(45deg);
+	animation: none;
+}
+
+@keyframes rotatie_1
+{
+	0%   {background-color: white;}
+	20%  {background-color: gray; transform: rotate(90deg);}
+	40%  {background-color: var(--gri_inchis); transform: rotate(180deg);}
+	60%  {background-color: black; transform: rotate(270deg);}
+	80% {background-color: white; transform: rotate(360deg); transform: translateX(450px);}
+	100% {background-color: white;}
+}
+
+@keyframes rotatie_2
+{
+	0%   {background-color: white;}
+	20%  {background-color: gray; transform: rotate(90deg);}
+	40%  {background-color: var(--gri_inchis); transform: rotate(180deg);}
+	60%  {background-color: black; transform: rotate(270deg);}
+	80% {background-color: white; transform: rotate(360deg); transform: translateX(-450px);}
+	100% {background-color: white;}
+}
+
+@media screen and (max-width: 800px)
+{
+	*
+	{
+		font-size: 15px;
+	}
+	
+	.div_animatie_1, .div_animatie_2
+	{
+		display: none;
+	}
+	
+	#optiuni_meniu_principal a
+	{
+		font-size: 10px;
+	}
+	
+	#buton_meniu_principal
+	{
+		font-size: 15px;
+	}
+	
+	footer > p
+	{
+		font-size: 5px;
+	}
+}
+
+@media screen and (min-width: 801px) and (max-width: 1300px)
+{
+	*
+	{
+		font-size: 20px;
+	}
+	
+	.div_animatie_1, .div_animatie_2
+	{
+		width: 50px;
+		height: 50px;
+	}
+	
+	.div_animatie_2
+	{
+		left: 500px;
+	}
+	
+	#optiuni_meniu_principal a
+	{
+		font-size: 15px;
+	}
+	
+	#buton_meniu_principal
+	{
+		font-size: 20px;
+	}
+	
+	@keyframes rotatie_1
+	{
+		0%   {background-color: white;}
+		20%  {background-color: gray; transform: rotate(90deg);}
+		40%  {background-color: var(--gri_inchis); transform: rotate(180deg);}
+		60%  {background-color: black; transform: rotate(270deg);}
+		80% {background-color: white; transform: rotate(360deg); transform: translateX(250px);}
+		100% {background-color: white;}
+	}
+
+	@keyframes rotatie_2
+	{
+		0%   {background-color: white;}
+		20%  {background-color: gray; transform: rotate(90deg);}
+		40%  {background-color: var(--gri_inchis); transform: rotate(180deg);}
+		60%  {background-color: black; transform: rotate(270deg);}
+		80% {background-color: white; transform: rotate(360deg); transform: translateX(-250px);}
+		100% {background-color: white;}
+	}
+	
+	footer > p
+	{
+		font-size: 7px;
+	}
+}
+
+@media screen and (min-width: 1301px)
+{
+	*
+	{
+		font-size: 30px;
+	}
+	
+	.div_animatie2
+	{
+		left: 900px;
+	}
+	
+	#optiuni_meniu_principal a
+	{
+		font-size: 25px;
+	}
+	
+	#buton_meniu_principal
+	{
+		font-size: 30px;
+	}
+	
+	@keyframes rotatie_1
+	{	
+		0%   {background-color: white;}
+		20%  {background-color: gray; transform: rotate(90deg);}
+		40%  {background-color: var(--gri_inchis); transform: rotate(180deg);}
+		60%  {background-color: black; transform: rotate(270deg);}
+		80% {background-color: white; transform: rotate(360deg); transform: translateX(450px);}
+		100% {background-color: white;}
+	}
+
+	@keyframes rotatie_2
+	{
+		0%   {background-color: white;}
+		20%  {background-color: gray; transform: rotate(90deg);}
+		40%  {background-color: var(--gri_inchis); transform: rotate(180deg);}
+		60%  {background-color: black; transform: rotate(270deg);}
+		80% {background-color: white; transform: rotate(360deg); transform: translateX(-450px);}
+		100% {background-color: white;}
+	}
+	
+	footer > p
+	{
+		font-size: 10px;
+	}
+}
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<title>Quiz</title>
+		<meta charset = "utf-8">
+		<meta name = "autor" content="Capatina Razvan Nicolae">
+		<meta name = "description" content="Un scurt quiz despre cele mai impresionante cladiri din lume">
+		<meta name = "keywords" content="quiz">
+		
+		<link rel="stylesheet" href="styles/formular_style.css" type="text/css">
+		<script src="javaScript/formular_javaScript.js"></script>
+		<link rel="icon" href="favicons/index_favicon.png" type="image/x-icon">
+	</head>
+
+	<body id="body">
+
+		<div id = "div_formular">
+			<form action="/submit" method="post" id="formular">
+				<fieldset class = "contur_formular">
+
+    					<label for="nume" class="required">Nume:</label>
+    					<input type="text" id="nume" name="nume" pattern="^[A-Z]([a-z]+$)" required><br><br>
+    
+					<label for="prenume" class = "required">Prenume:</label>
+					<input type="text" id="prenume" name="prenume" pattern="^([A-Z][a-z]+(\s[A-Z][a-z]+)*)$" required><br><br>
+
+					<label for="data_nastere" class="required">Data Nasterii:</label>
+					<input type="date" id="data_nastere" name="data_nastere" required><br><br>
+
+    					<label for="email" class="required">Email:</label>
+    					<input type="email" id="email" name="email" pattern="^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$" required><br><br>
+
+					<label for="nota_site">Nota Site:</label>
+					<input type="range" id="nota_site" name="nota_site" min="0" max="10" step="0.05" required>
+					<output for="nota_site" id="nota_site_valoare">0</output>/10<br><br>
+    
+    					<label for="feedback">Feedback Site:</label>
+    					<textarea id="feedback" name="feedback" rows="4" cols="30"></textarea><br><br>
+
+					<select id="select_formular">
+						<option value="">Selectati constructia preferata...*</option>
+						<option value="burj_khalifa">Burj Khalifa</option>
+						<option value="palatul_parlamentului">Palatul Parlamentului</option>
+						<option value="marele_zid_chinezesc">Marele Zid Chinezesc</option>
+						<option value="turnul_din_pisa">Turnul din Pisa</option>
+						<option value="podul_hong_kong_zhuhai_macao">Podul Hong Kong-Zhuhai Macao</option>
+						<option value="biblioteca_din_alexandria">Biblioteca din Alexandria</option>
+						<option value="colosseumul">Colosseumul</option>
+					</select>
+    
+				</fieldset>
+
+				<!--
+				<fieldset class = "contur_formular">
+
+					<p>Quiz</p>
+
+					<label for="q1">Q1: Cea mai inalta cladire din lume se afla in:</label><br><br>
+					<input type="radio" name="r1.1" value="Emiratele Arabe Unite" id="r1.1">
+
+				</fieldset>
+				-->
+
+				<button type="submit" class="buton_trimitere"></button>
+  			</form>  
+		</div>
+
+	</body>
+</html>
